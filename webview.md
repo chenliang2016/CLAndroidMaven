@@ -34,7 +34,7 @@ H5App.callNative(method,params,onSuccess,onFailure)
 ###method与params对应关系
 
 |method|params|描述|
-|--|--|--|
+|---|---|---|
 |showLoading|{message:"加载中"}|弹出框加载方式|
 |hideLoading|""|弹出框加载关闭|
 |alertMessage|{message:"加载中"}|弹出确认提示框|
