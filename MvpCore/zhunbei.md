@@ -20,7 +20,7 @@ android {
 
 dependencies {
     ...
-    compile 'com.cl:mvpcore:1.0.3'
+    compile 'com.cl:mvpcore:1.1.0'
     ...
 }
 ```
