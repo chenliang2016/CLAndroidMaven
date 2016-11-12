@@ -1,52 +1,63 @@
-##准备
+##网络请求
 
-###引入依赖
+网络请求使用了Retrofit+RxJava的方式
 
-build.gradle修改
+#####创建请求接口接口
 
 ```
 
-android {
-    ...
-    repositories {
-     	 ...
-        maven {
-            url "https://raw.githubusercontent.com/chenliang2016/CLAndroidMaven/master"
-        }
-        ...
-    }
-    ...
-}
+import retrofit2.Call;
+import retrofit2.http.GET;
+import retrofit2.http.Path;
+import rx.Observable;
 
-dependencies {
-    ...
-    compile 'com.cl:mvpcore:1.0.2'
-    ...
+
+public interface ApiStores {
+    //baseUrl
+    String API_SERVER_URL = "http://www.weather.com.cn/";
+
+    //加载天气
+    @GET("adat/sk/{cityId}.html")
+    Observable<T> loadDataByRetrofitRxjava(@Path("cityId") String cityId);
 }
 ```
 
-###权限配置
-* 网络请求，各权限添加，设置Application。
+其中T换成自己的返回实体。
+
+#####创建ApiStores的接口对象
 
 ```
-    ...
-    <!-- 在SDCard中创建与删除文件权限 -->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
-    <!-- 往SDCard写入数据权限 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
-    ...
-```
+ApiStores apiStores = AppClient.retrofit("").create(ApiStores.class)
 
-###创建自己的application 继承 BaseApplication
-
-因为在BaseApplication中进行了Mvp相关单例文件的创建
 
 ```
-public class MyApplication extends BaseApplication {
-}
+
+#####使用RxJava的观察者模式进行网络请求，并监听请求成功失败等状态
 
 ```
+addSubscription(apiStores.loadDataByRetrofitRxjava(cityId),
+                new ApiCallback<MainModel>() {
+                    @Override
+                    public void onSuccess(MainModel model) {
+                        mvpView.getDataSuccess(model);
+                    }
+
+                    @Override
+                    public void onFailure(String msg) {
+                        mvpView.getDataFail(msg);
+                    }
+
+
+                    @Override
+                    public void onFinish() {
+                        mvpView.hideLoading();
+                    }
+
+                });
+
+```
+
+>注意：整个过程在presenter中使用，因为addSubscription方法，是BasePresenter中的方法
+
+
+

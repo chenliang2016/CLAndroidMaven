@@ -33,12 +33,12 @@ compile 'com.cl:webview:1.1.1'
 * mvpcore
 
 ```
-compile 'com.cl:mvpcore:1.0.0'
+compile 'com.cl:mvpcore:1.1.0'
 ```
 
 基于mvp的一个核心框架，集成了mvp架构，网络请求工具
 
-[使用方法](MvpCore/readme.md);
+[使用方法](MvpCore/readme.md)
 
 * webview
 
@@ -48,4 +48,14 @@ compile 'com.cl:webview:1.1.1'
 
 封装webview与js交互的相关方法
 
-[使用方法](webview.md);
+[使用方法](webview/readme.md)
+
+* TWidget
+
+```
+compile 'com.cl:twidget:1.0.2'
+```
+
+自定义了相关控件
+
+[使用方法](TWidget/readme.md)
