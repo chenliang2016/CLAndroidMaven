@@ -7,6 +7,6 @@
 控件目录
 
 * [TWActionSheet](TWActionSheet.md)
-* [MutiImageSelector](MutiImageSelector.md)
+* [PhotoPicker](https://github.com/glassLake/PhotoPicker)
 
 

@@ -41,3 +41,5 @@ H5App.callNative(method,params,onSuccess,onFailure)
 |showToast|{message:"加载中"}|toast显示|
 |naviPush|{className:"com.cl.clandroidmvp.CommonWebViewActivity",params:{url:"https://www.baidu.com"}}|映射到startActivity方法，className是类名，params，是传的参数|
 |naviPop|“”|关闭当前activity|
+|photoPick|“{uploadUrl:"http://192.168.16.213:7000/upload"}”|图片上传，包括拍照，选择图片|
+|qrscan|“”|二维码扫描|

@@ -35,21 +35,6 @@ dependencies {
     xmlns:tools="http://schemas.android.com/tools"
     package="com.cl.clandroidmvp">
 
-    <application
-        android:name=".MyApplication"
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        tools:replace="android:icon">
-        ...
-        <activity
-            android:configChanges="orientation|screenSize"
-            android:name="com.cl.twidget.ImageSelector.MultiImageSelectorActivity" />
-        ...    
-
-    </application>
 
     ...
     <!-- 在SDCard中创建与删除文件权限 -->
