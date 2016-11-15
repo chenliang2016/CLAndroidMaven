@@ -35,6 +35,22 @@ dependencies {
     xmlns:tools="http://schemas.android.com/tools"
     package="com.cl.clandroidmvp">
 
+ <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/customTheme"
+        tools:replace="android:icon">
+  
+  
+		...
+        <activity android:name="com.cl.twidget.QRScanActivity"
+            android:screenOrientation="portrait" />
+		...
+    </application>
+    
 
     ...
     <!-- 在SDCard中创建与删除文件权限 -->
@@ -47,6 +63,11 @@ dependencies {
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    
+    //二维码扫描需要的权限
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
    ...
 
 </manifest>
