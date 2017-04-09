@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.cl</groupId>
   <artifactId>twidget</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <packaging>aar</packaging>
   <dependencies>
     <dependency>
@@ -52,15 +52,15 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>CLAndroidMVP</groupId>
+      <groupId>com.cl</groupId>
       <artifactId>clutil</artifactId>
-      <version>unspecified</version>
+      <version>1.0.1</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>CLAndroidMVP</groupId>
+      <groupId>com.cl</groupId>
       <artifactId>spinkit</artifactId>
-      <version>unspecified</version>
+      <version>1.0.0</version>
       <scope>compile</scope>
     </dependency>
   </dependencies>
