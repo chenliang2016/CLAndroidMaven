@@ -3,10 +3,11 @@
   <groupId>com.lmm</groupId>
   <artifactId>lmmbdmap</artifactId>
   <versioning>
-    <release>0.0.1</release>
+    <release>0.0.2</release>
     <versions>
       <version>0.0.1</version>
+      <version>0.0.2</version>
     </versions>
-    <lastUpdated>20180412023636</lastUpdated>
+    <lastUpdated>20180424033913</lastUpdated>
   </versioning>
 </metadata>

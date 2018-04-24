@@ -146,9 +146,9 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>com.lmm</groupId>
+      <groupId>ReactNativeDemo</groupId>
       <artifactId>lmmbdmap</artifactId>
-      <version>0.0.1</version>
+      <version>unspecified</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
