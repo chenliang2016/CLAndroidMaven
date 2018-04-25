@@ -146,6 +146,12 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
+      <groupId>com.cl</groupId>
+      <artifactId>baidumap</artifactId>
+      <version>1.0.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
       <groupId>com.squareup.retrofit2</groupId>
       <artifactId>retrofit-adapters</artifactId>
       <version>2.3.0</version>
